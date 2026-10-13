@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuádruplos y triplos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <h1>Cuádruplos y triplos</h1>
+    <p>Escribe una expresión y mira cómo se traduce a código intermedio paso a paso.</p>
+  </header>
+
+  <main>
+    <section class="capture" aria-labelledby="capture-title">
+      <form id="calc-form" novalidate>
+        <label id="capture-title" for="expression">Expresión</label>
+        <input id="expression" type="text" autocomplete="off" spellcheck="false"
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Calcular</button>
+          <button type="button" id="clear-btn" class="btn">Limpiar</button>
+        </div>
+      </form>
+      <div id="alert" role="alert" hidden></div>
+    </section>
+
+    <section id="results" aria-live="polite" hidden>
+      <div class="result-card">
+        <h2>Resultado</h2>
+        <output id="result"></output>
+        <p id="result-note"></p>
+      </div>
+      <div class="tables">
+        <article>
+          <h2>Cuádruplos</h2>
+          <p class="caption">(operador, argumento 1, argumento 2, resultado)</p>
+          <div id="quadruples" class="table-wrap"></div>
+        </article>
+        <article>
+          <h2>Triplos</h2>
+          <p class="caption">(operador, argumento 1, argumento 2) · (n) apunta a la fila n</p>
+          <div id="triples" class="table-wrap"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
